@@ -3,22 +3,20 @@ package model;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
-import java.util.ArrayList;
+
 
 public class Course {
 	private String title;
 	private String CRN;
-	private Session courseSession;
+	private static final String CLASSROOM_SESSION = "CLASSROOM";
+	private static final String ONLINE_SESSION = "ONLINE";
 
-	public Course(String title, String CRN, Session courSession){
-		setCourseSession(courSession);
+	public Course(String title, String CRN){
 		this.title = title;
 		this.CRN = CRN;
-	}
-	public void setCourseSession(Session courseSession) {
-		this.courseSession = courseSession;
-	}
 
+	}
+	
 	public String getCRN() {
 		return CRN;
 	}
@@ -35,13 +33,15 @@ public class Course {
 		this.title = title;
 	}
 
-	public ArrayList<CourseInstructor> getInstructors() {
-		return instructors;
+	
+	public String printCourseInfo() {
+		return "Course Title: " + title + "\n" +
+				"Course CRN: " + CRN;
 	}
 
-	public void setInstructors(ArrayList<CourseInstructor> instructors) {
-		this.instructors = instructors;
-	}
+	
+
+	
 
 	
 

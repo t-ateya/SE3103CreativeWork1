@@ -1,13 +1,15 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Student {
+	private CourseDatabase courses;
 	private String firstName;
 	private String lastName;
 	private int gradeYear;
 	private String studentID;
-	private String courses = " ";
+	private ArrayList<Course> Enrolledcourses  = new ArrayList<>();
 	private double tuitionBalance;
 	private static int costPerCourse = 600;
 	private static int id = 1000;
@@ -25,8 +27,13 @@ public class Student {
 		setStudentID();
 	}
 
-	
+	public ArrayList<Course> getEnrolledcourses() {
+		return Enrolledcourses;
+	}
 
+	public String getStudentID() {
+		return studentID;
+	}
 	private void setStudentID() {
 		id++;
 		this.studentID = gradeYear + " " + id;
@@ -56,6 +63,7 @@ public class Student {
 
 
 	public void enroll(){
+		for (var )
 		do {
 			System.out.println("Enter course to enroll (Q to quit): ");
 			Scanner in = new Scanner(System.in);
@@ -90,7 +98,7 @@ public class Student {
 		viewBalance();
 	}
 
-	public String showInfo(){
+	public String printStudentInfo(){
 		  return "Name: " + firstName + " " + lastName +
 					  "\nGrade Level: " + gradeYear +
 					  "\nStudentID: " + studentID +

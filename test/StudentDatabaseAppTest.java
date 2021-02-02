@@ -1,16 +1,17 @@
 package test;
 
-import model.Session;
+import model.CourseDatabase;
 
 public class StudentDatabaseAppTest {
-	
-	public static void main(String[] args){
-		
-		for (var s: Session.CourseSession.values()){
-			System.out.println(s);
-		}
+	private static CourseDatabase data;
 
-		System.out.println(Session.CourseSession.FALL);
+	public static void main(String[] args) {
+
+		for (var d : data.getDatabase()) {
+			System.out.println(d.toString());
+		}
+		
+		
 	}
 	
 }
