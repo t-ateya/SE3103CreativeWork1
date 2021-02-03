@@ -3,8 +3,10 @@ package model;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class Student {
-	private CourseDatabase courses;
+	private Course course;
+	private CourseDatabase cdata;
 	private String firstName;
 	private String lastName;
 	private int gradeYear;
@@ -22,11 +24,14 @@ public class Student {
 		System.out.println("Enter Student Last Name: ");
 		this.lastName = in.nextLine();
 
+		//System.out.println("Choose a number below corresponding to your grade year");
 		System.out.println("1 - Freshman\n2 -Sophomore\n3 -Junior\n4 -Senior\nEnter student class level: ");
-
+		this.gradeYear = in.nextInt();
 		setStudentID();
+		
 	}
 
+	
 	public ArrayList<Course> getEnrolledcourses() {
 		return Enrolledcourses;
 	}
@@ -36,7 +41,7 @@ public class Student {
 	}
 	private void setStudentID() {
 		id++;
-		this.studentID = gradeYear + " " + id;
+		this.studentID = gradeYear + "" + id;
 	}
 
 	public String getFirstName() {
@@ -47,12 +52,10 @@ public class Student {
 		return lastName;
 	}
 	
-
 	public int getGradeYear() {
 		return gradeYear;
 	}
 	
-
 	public double getTuitionBalance() {
 		return tuitionBalance;
 	}
@@ -61,8 +64,12 @@ public class Student {
 		this.tuitionBalance = tuitionBalance;
 	}
 
-
+	
 	public void enroll(){
+	
+	}
+
+		/*
 		for (var )
 		do {
 			System.out.println("Enter course to enroll (Q to quit): ");
@@ -77,8 +84,10 @@ public class Student {
 			
 
 		} while ( 1 !=0);
+		*/
 
-	}
+	
+     
 
 	//private balance
 	private void viewBalance(){
@@ -98,13 +107,14 @@ public class Student {
 		viewBalance();
 	}
 
-	public String printStudentInfo(){
-		  return "Name: " + firstName + " " + lastName +
-					  "\nGrade Level: " + gradeYear +
-					  "\nStudentID: " + studentID +
-					  "\nCourses Enrolled: " + courses +
-					  "\nBalance: $" + tuitionBalance;
+	public void printStudentInfo(){
+	String info =  ("Name: " + firstName + " " + lastName +
+			"\nGrade Level: " + gradeYear +
+			"\nStudentID: " + studentID +
+					 // "\nCourses Enrolled: " + courses +
+			"\nBalance: $" + tuitionBalance );
 
+	 System.out.println(info);
 	}
 
 	
