@@ -23,8 +23,11 @@ public class StudentDatabaseAppTest {
 		//student.enroll();
 		
 		ArrayList<Course> db = CourseDatabase.CoursesOfferred;
-		Course c1 = db.get(0);
-		c1.diplayCourse();
+		//Course c1 = db.get(0);
+		//c1.diplayCourse();
+		for (Course c : db){
+			c.diplayCourse();
+		}
 
 		
 

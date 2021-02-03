@@ -9,40 +9,37 @@ public class Course {
 	private CourseDatabase courseData;
 	private String title;
 	private String CRN;
-	private static final String CLASSROOM_SESSION = "AVAILABLE";
-	private static final String ONLINE_SESSION = "AVAILABLE";
-	private static String NOT_AVAILABLE_SESSION = "NOT AVAILABE";
+	private String AVAILABE_SESSION = "ONLINE";
+	
+	
 
 	public Course(){
 
 	}
-	public Course(String title, String CRN, String Onlinesession, String classroomSession){
+	public Course(String title, String CRN, String session){
 		this.title = title;
 		this.CRN = CRN;
+		AVAILABE_SESSION = session;
 
 	}
 
 	public void diplayCourse(){
+		System.out.println("\n-------------COURSE INFORMATION----------------");
 		System.out.println("Course Title: " + title + "\n"
 							+ "CRN: " + CRN +
-							"\nOnline Session: " + getOnlineSession()+
-							"\nIn class Session: " + getClassroomSession());
+							"\nSession: " + AVAILABE_SESSION
+							);
 		
 	}
-	
-	public static String getNOT_AVAILABLE_SESSION() {
-		return NOT_AVAILABLE_SESSION;
-	}
-	
-	public static String getClassroomSession() {
-		return CLASSROOM_SESSION;
+
+	public  String getAVAILABE_SESSION() {
+		return AVAILABE_SESSION;
 	}
 
-	public static String getOnlineSession() {
-		return ONLINE_SESSION;
+	public void setAVAILABE_SESSION(String session) {
+		AVAILABE_SESSION = session;
 	}
 
-	
 	public String getCRN() {
 		return CRN;
 	}
