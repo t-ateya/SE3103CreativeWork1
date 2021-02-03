@@ -14,8 +14,8 @@ public class StudentDatabaseAppTest {
 			
 		} */
 
-		Student student  = new Student();
-		Course course = new Course();
+		//Student student  = new Student();
+		//Course course = new Course();
 		//ArrayList<Course> db = student.getEnrolledcourses();
 		
 		/*
