@@ -12,7 +12,7 @@ public class CourseEventListener implements ActionListener {
 
 	private CoursePanel panel;
 
-	public CourseEventListener(CoursePanel coursePanel) {
+	public CourseEventListener(CoursePanel panel) {
 		this.panel = panel;
 	}
 
@@ -22,7 +22,8 @@ public class CourseEventListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		JButton button  = (JButton)e.getSource();
+		JButton button = (JButton) e.getSource();
+		//System.out.println(button.getText());
 
 		if (button == panel.getExitButton()){
 			panel.getWindow().getContentPane().removeAll();
@@ -30,14 +31,12 @@ public class CourseEventListener implements ActionListener {
 			menu.init();
 			panel.getWindow().pack();
 			panel.getWindow().revalidate();
-		}else {
-			System.out.println("click button");
 		}
-
 
 	}
 
 	
+
 	
-	
+
 }
