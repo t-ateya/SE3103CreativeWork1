@@ -24,11 +24,13 @@ public class StudentDatabaseAppTest {
 			c.diplayCourse();
 		}
 		*/
+		/*
 		student.getStudentCredentials();
 		course.diplayCourse();
 		student.enroll();
 		student.payTuition();
 		student.printStudentRegistrationInfo();
+		*/
 
 
 		

@@ -1,8 +1,9 @@
-package view;
-
 import javax.swing.JFrame;
 
-public class AppDrive {
+import view.MenuScreen;
+
+public class Main {
+
 	public static void main(String[] args) {
 		JFrame window = new JFrame();
 
@@ -15,7 +16,6 @@ public class AppDrive {
 		
 		window.pack();
 		window.setVisible(true);
-		
 	}
 	
 }
