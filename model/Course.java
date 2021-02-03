@@ -11,6 +11,9 @@ public class Course {
 
 	private String courseInfo;
 
+	public Course(){
+
+	}
 	public Course(String title, String CRN, String session) {
 		this.title = title;
 		this.CRN = CRN;
@@ -51,10 +54,12 @@ public class Course {
 		return courseInfo;
 	}
 
+	/*
 	public void render(Graphics2D g2) {
 		g2.setColor(Color.yellow);
 		g2.setFont(new Font("Courier", Font.BOLD, 14));
 		g2.drawString(getCourseInfo(), 50, 100);
 	}
+	*/
 
 }

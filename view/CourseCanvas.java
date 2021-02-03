@@ -7,14 +7,20 @@ import java.awt.Graphics2D;
 
 import javax.swing.JPanel;
 
+import model.Course;
+
 
 
 public class CourseCanvas extends JPanel {
-
+	
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 1L;
 	private CoursePanel panel;
 
 	public CourseCanvas(CoursePanel panel) {
-		this.panel = panel;
+		this.setPanel(panel);
 		setPreferredSize(new Dimension(500, 500));
 		setBackground(Color.BLACK);
 	}
@@ -27,16 +33,17 @@ public class CourseCanvas extends JPanel {
 		this.panel = panel;
 	}
 
-
+	
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 
 		Graphics2D g2 = (Graphics2D)g;
-		//CourseController controller= new CourseController();
+		Course   controller= new Course();
 		//controller.render(g2);
 
 	}
+	
 
 	
 

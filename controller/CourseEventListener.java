@@ -31,7 +31,7 @@ public class CourseEventListener implements ActionListener {
 			panel.getWindow().pack();
 			panel.getWindow().revalidate();
 		}else {
-
+			System.out.println("click button");
 		}
 
 

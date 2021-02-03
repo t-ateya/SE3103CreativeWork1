@@ -6,6 +6,20 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "Launch AppDriver",
+			"request": "launch",
+			"mainClass": "AppDriver",
+			"projectName": "CreativeWork1_33443379"
+		},
+		{
+			"type": "java",
+			"name": "Launch APPDriver",
+			"request": "launch",
+			"mainClass": "main.APPDriver",
+			"projectName": "CreativeWork1_33443379"
+		},
+		{
+			"type": "java",
 			"name": "Launch Main",
 			"request": "launch",
 			"mainClass": "Main",
