@@ -3,7 +3,6 @@ package model;
 import java.util.ArrayList;
 
 public class CourseDatabase {
-	private static Course course;
 
 	public static final ArrayList<Course> CoursesOfferred = new ArrayList<>();
 

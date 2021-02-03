@@ -27,12 +27,9 @@ public class StudentDatabaseAppTest {
 		/*for (Course c : db){
 			c.diplayCourse();
 		} */
-
-		
-
-		
-		
-		
+	
 	}
+
+	
 	
 }

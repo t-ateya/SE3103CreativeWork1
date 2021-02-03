@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 
 public class Student {
+	private ArrayList<Course> db = CourseDatabase.CoursesOfferred;
+
 	
-	private CourseDatabase cdata;
 	private String firstName;
 	private String lastName;
 	private int gradeYear;
@@ -31,8 +32,7 @@ public class Student {
 		System.out.println("=====================================================");
 		System.out.println("\n       CHOOSE COURSE INFO TO ENROLL"               );
 		System.out.println("=====================================================");
-
-		enroll();
+		displayCourseInfo(db);
 		
 	}
 
@@ -70,8 +70,7 @@ public class Student {
 	}
 
 	
-	public void enroll(){
-		ArrayList<Course> db = CourseDatabase.CoursesOfferred;
+	public void displayCourseInfo(ArrayList<Course> db){
 		for (Course c : db){
 			c.diplayCourse();
 		}
