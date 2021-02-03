@@ -4,34 +4,26 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
 
-
 public class Course {
-	private CourseDatabase courseData;
 	private String title;
 	private String CRN;
 	private String AVAILABE_SESSION = "ONLINE";
-	
-	
 
-	public Course(){
+	private String courseInfo;
 
-	}
-	public Course(String title, String CRN, String session){
+	public Course(String title, String CRN, String session) {
 		this.title = title;
 		this.CRN = CRN;
 		AVAILABE_SESSION = session;
 
 	}
 
-	public void diplayCourse(){
-		System.out.println("Course Title: " + title + "\n"
-							+ "CRN: " + CRN +
-							"\nSession: " + AVAILABE_SESSION + "\n"
-							);
-		
+	public void diplayCourse() {
+		courseInfo = "Course Title: " + title + "\n" + "CRN: " + CRN + "\nSession: " + AVAILABE_SESSION + "\n";
+		System.out.println(courseInfo);
 	}
 
-	public  String getAVAILABE_SESSION() {
+	public String getAVAILABE_SESSION() {
 		return AVAILABE_SESSION;
 	}
 
@@ -55,11 +47,14 @@ public class Course {
 		this.title = title;
 	}
 
+	public String getCourseInfo() {
+		return courseInfo;
+	}
 
-	public void render(Graphics2D g2){
+	public void render(Graphics2D g2) {
 		g2.setColor(Color.yellow);
 		g2.setFont(new Font("Courier", Font.BOLD, 14));
-		g2.drawString(title, 50, 100);
+		g2.drawString(getCourseInfo(), 50, 100);
 	}
-	
+
 }

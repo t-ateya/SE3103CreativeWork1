@@ -15,6 +15,24 @@ public class StudentDatabaseAppTest {
 		} */
 
 		Student student  = new Student();
+		Course course = new Course();
+		//ArrayList<Course> db = student.getEnrolledcourses();
+		
+		/*
+		System.out.println("===============Enrolled Courses=============");
+		for (var c: db){
+			c.diplayCourse();
+		}
+		*/
+		student.getStudentCredentials();
+		course.diplayCourse();
+		student.enroll();
+		student.payTuition();
+		student.printStudentRegistrationInfo();
+
+
+		
+		
 		
 		//student.printStudentInfo();
 		//assert (student.getStudentID().equals("11001"));
@@ -30,6 +48,6 @@ public class StudentDatabaseAppTest {
 	
 	}
 
-	
+
 	
 }
