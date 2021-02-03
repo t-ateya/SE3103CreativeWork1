@@ -52,6 +52,10 @@ public class CoursePanel {
 		return messageArea;
 	}
 
+	public JFrame getWindow() {
+		return window;
+	}
+
 	public void init(){
 		Container cp = window.getContentPane();
 
@@ -91,6 +95,6 @@ public class CoursePanel {
 
 	}
 
-	
+
 	
 }

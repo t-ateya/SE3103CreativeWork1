@@ -7,7 +7,6 @@ import java.awt.Graphics2D;
 
 import javax.swing.JPanel;
 
-import controller.CourseController;
 
 
 public class CourseCanvas extends JPanel {
@@ -34,8 +33,8 @@ public class CourseCanvas extends JPanel {
 		super.paintComponent(g);
 
 		Graphics2D g2 = (Graphics2D)g;
-		CourseController controller= new CourseController();
-		controller.render(g2);
+		//CourseController controller= new CourseController();
+		//controller.render(g2);
 
 	}
 
