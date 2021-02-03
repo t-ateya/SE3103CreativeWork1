@@ -17,7 +17,7 @@ public class CourseCanvas extends JPanel {
 	private int courseIndex = -1;
 	public CourseCanvas(CoursePanel panel) {
 		this.setPanel(panel);
-		setPreferredSize(new Dimension(500, 500));
+		setPreferredSize(new Dimension(1000, 500));
 		setBackground(Color.BLACK);
 	}
 

@@ -17,7 +17,7 @@ public class CourseDatabase {
 		CoursesOfferred.add(new Course("Computer Science 101", "44781", "ONLINE"));
 	}
 
-	public ArrayList<Course> getOfferredCourses() {
+	public  ArrayList<Course> getOfferredCourses() {
 		return CoursesOfferred;
 	}
 

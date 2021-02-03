@@ -154,7 +154,7 @@ public class Student {
 
 	public void render(Graphics2D g2){
 		g2.setColor(Color.red);
-		g2.setFont(new Font("Courier", Font.BOLD, 14));
-		g2.drawString(getStudentInfo(), 50, 100);
+		g2.setFont(new Font("Courier", Font.BOLD, 20));
+		g2.drawString(firstName, 50, 100);
 	}
 }

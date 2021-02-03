@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 
 public class Course {
+	private CourseDatabase data;
 	private String title;
 	private String CRN;
 	private String AVAILABE_SESSION = "ONLINE";
@@ -56,9 +57,14 @@ public class Course {
 
 	
 	public void render(Graphics2D g2) {
-		g2.setColor(Color.yellow);
-		g2.setFont(new Font("Courier", Font.BOLD, 14));
-		g2.drawString(getCourseInfo(), 50, 100);
+		g2.setColor(Color.red);
+		g2.setFont(new Font("Courier", Font.BOLD, 16));
+		g2.drawString("Course Title: " + title + ", \n " +
+					"\nCRN: " + CRN + ", \t  Session: " + AVAILABE_SESSION + "\n", 50, 100);
+		
+		
+		
+		
 	}
 	
 

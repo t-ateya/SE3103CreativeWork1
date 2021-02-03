@@ -7,6 +7,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
+
+import model.CourseDatabase;
 
 public class CourseEventListener implements ActionListener {
 
@@ -32,11 +35,16 @@ public class CourseEventListener implements ActionListener {
 			panel.getWindow().pack();
 			panel.getWindow().revalidate();
 		}else if(button == panel.getViewCourseButton()){
-				
+				int index = panel.getCanvas().getCourseIndex();
+				++index;
+				if (index == CourseDatabase.CoursesOfferred.size()){
+					index = 0;
+				}
+				panel.getCanvas().setCourseIndex(index);
+				panel.getCanvas().repaint();
 		}
 
-	}
-
+	} 
 	
 
 	
