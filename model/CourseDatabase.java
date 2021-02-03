@@ -14,7 +14,7 @@ public class CourseDatabase {
 		CoursesOfferred.add(new Course("English 101", "23455", "ONLINE"));
 		CoursesOfferred.add(new Course("Chemistry 101", "67893", "CLASSROOM"));
 		CoursesOfferred.add(new Course("Chemistry 101", "67894", "ONLINE"));
-		CoursesOfferred.add(new Course("Computer Science 101", "44780", "ONLINE"));
+		CoursesOfferred.add(new Course("Computer Science 101", "44780", "CLASSROOM"));
 		CoursesOfferred.add(new Course("Computer Science 101", "44781", "ONLINE"));
 	}
 

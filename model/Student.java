@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 
 public class Student {
-	private Course course;
+	
 	private CourseDatabase cdata;
 	private String firstName;
 	private String lastName;
@@ -28,6 +28,11 @@ public class Student {
 		System.out.println("1 - Freshman\n2 -Sophomore\n3 -Junior\n4 -Senior\nEnter student class level: ");
 		this.gradeYear = in.nextInt();
 		setStudentID();
+		System.out.println("=====================================================");
+		System.out.println("\n       CHOOSE COURSE INFO TO ENROLL"               );
+		System.out.println("=====================================================");
+
+		enroll();
 		
 	}
 
@@ -66,6 +71,10 @@ public class Student {
 
 	
 	public void enroll(){
+		ArrayList<Course> db = CourseDatabase.CoursesOfferred;
+		for (Course c : db){
+			c.diplayCourse();
+		}
 	
 	}
 

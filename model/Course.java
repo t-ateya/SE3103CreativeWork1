@@ -24,10 +24,9 @@ public class Course {
 	}
 
 	public void diplayCourse(){
-		System.out.println("\n-------------COURSE INFORMATION----------------");
 		System.out.println("Course Title: " + title + "\n"
 							+ "CRN: " + CRN +
-							"\nSession: " + AVAILABE_SESSION
+							"\nSession: " + AVAILABE_SESSION + "\n"
 							);
 		
 	}

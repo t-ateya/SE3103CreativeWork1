@@ -14,20 +14,19 @@ public class StudentDatabaseAppTest {
 			
 		} */
 
-		
-
-		//Student student  = new Student();
+		Student student  = new Student();
 		
 		//student.printStudentInfo();
 		//assert (student.getStudentID().equals("11001"));
 		//student.enroll();
 		
-		ArrayList<Course> db = CourseDatabase.CoursesOfferred;
+		//ArrayList<Course> db = CourseDatabase.CoursesOfferred;
 		//Course c1 = db.get(0);
 		//c1.diplayCourse();
-		for (Course c : db){
+
+		/*for (Course c : db){
 			c.diplayCourse();
-		}
+		} */
 
 		
 
