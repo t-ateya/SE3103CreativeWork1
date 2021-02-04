@@ -7,7 +7,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JOptionPane;
 
 import model.CourseDatabase;
 
@@ -26,27 +25,31 @@ public class CourseEventListener implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		JButton button = (JButton) e.getSource();
-		//System.out.println(button.getText());
 
-		if (button == panel.getExitButton()){
+		if (button == panel.getExitButton()) {
 			panel.getWindow().getContentPane().removeAll();
 			var menu = new MenuScreen(panel.getWindow());
 			menu.init();
 			panel.getWindow().pack();
 			panel.getWindow().revalidate();
-		}else if(button == panel.getViewCourseButton()){
-				int index = panel.getCanvas().getCourseIndex();
-				++index;
-				if (index == CourseDatabase.CoursesOfferred.size()){
-					index = 0;
-				}
-				panel.getCanvas().setCourseIndex(index);
-				panel.getCanvas().repaint();
+		} else if (button == panel.getViewCourseButton()) {
+			int index = panel.getCanvas().getCourseIndex();
+			++index;
+			if (index == CourseDatabase.CoursesOfferred.size()) {
+				index = 0;
+			}
+			panel.getCanvas().setCourseIndex(index);
+			panel.getCanvas().repaint();
+		} else if (button == panel.getPreviousCourseButton()) {
+			int index = panel.getCanvas().getCourseIndex();
+			--index;
+			if (index < 0) {
+				index = CourseDatabase.CoursesOfferred.size();
+			}
+			panel.getCanvas().setCourseIndex(index);
+			panel.getCanvas().repaint();
 		}
 
-	} 
-	
-
-	
+	}
 
 }

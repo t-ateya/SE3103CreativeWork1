@@ -12,14 +12,14 @@ public class Course {
 
 	private String courseInfo;
 
-	public Course(){
+	public Course() {
 
 	}
+
 	public Course(String title, String CRN, String session) {
 		this.title = title;
 		this.CRN = CRN;
 		AVAILABE_SESSION = session;
-
 	}
 
 	public void diplayCourse() {
@@ -55,17 +55,13 @@ public class Course {
 		return courseInfo;
 	}
 
-	
 	public void render(Graphics2D g2) {
 		g2.setColor(Color.red);
 		g2.setFont(new Font("Courier", Font.BOLD, 16));
-		g2.drawString("Course Title: " + title + ", \n " +
-					"\nCRN: " + CRN + ", \t  Session: " + AVAILABE_SESSION + "\n", 50, 100);
-		
-		
-		
-		
+		g2.drawString(
+				"Course Title: " + title + ", \n " + "\nCRN: " + CRN + ", \t  Session: " + AVAILABE_SESSION + "\n", 50,
+				100);
+
 	}
-	
 
 }

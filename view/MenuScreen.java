@@ -6,6 +6,7 @@ import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.GridLayout;
 
 public class MenuScreen {
 	private JFrame window;
@@ -18,10 +19,13 @@ public class MenuScreen {
 		Container cp = window.getContentPane();
 
 		JPanel menuPanel = new JPanel();
+		menuPanel.setLayout(new GridLayout(2, 1));
 		menuPanel.setPreferredSize(new Dimension(400, 200));
 
-		JButton courseButton = new JButton("CHECK AND ENROLL COURSES");
+		JButton courseButton = new JButton("COURSES DATABASE");
+		JButton studentButton = new JButton("STUDENT ENROLLMENT");
 		menuPanel.add(courseButton);
+		menuPanel.add(studentButton);
 
 		cp.add(BorderLayout.CENTER, menuPanel);
 

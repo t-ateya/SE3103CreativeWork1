@@ -3,14 +3,9 @@ package view;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
 
 import controller.CourseEventListener;
 
-import javax.swing.JLabel;
-
-import java.awt.GridLayout;
 import java.awt.BorderLayout;
 import java.awt.Container;
 
@@ -18,22 +13,23 @@ public class CoursePanel {
 	private JFrame window;
 	private CourseCanvas canvas;
 	private JButton viewCourseButton = new JButton("View Course");
-	private JButton enrollButton = new JButton("Enroll");
+	private JButton previousCourseButton = new JButton("Previous Course");
 	private JButton exitButton = new JButton("Exit");
-	private JButton enterButton = new JButton("Enter");
-	private JScrollPane jScrollPane = new JScrollPane();
+	// private JScrollPane jScrollPane = new JScrollPane();
 
-	private JTextArea messageArea = new JTextArea();
+	// private JTextArea messageArea = new JTextArea();
 
-	public CoursePanel(JFrame window){
+	public CoursePanel(JFrame window) {
 		this.window = window;
 	}
 
+	public JButton getPreviousCourseButton() {
+		return previousCourseButton;
+	}
+
+	
 	public CourseCanvas getCanvas() {
 		return canvas;
-	}
-	public JButton getEnrollButton() {
-		return enrollButton;
 	}
 	
 	public JButton getExitButton() {
@@ -44,14 +40,6 @@ public class CoursePanel {
 		return viewCourseButton;
 	}
 
-	public JButton getEnterButton() {
-		return enterButton;
-	}
-
-	public JTextArea getTextArea(){
-		return messageArea;
-	}
-
 	public JFrame getWindow() {
 		return window;
 	}
@@ -60,26 +48,25 @@ public class CoursePanel {
 		Container cp = window.getContentPane();
 
 		JPanel southPanel = new JPanel();
-		southPanel.setLayout(new GridLayout(2, 1));
+		//southPanel.setLayout(new GridLayout(2, 1));
 
 		cp.add(BorderLayout.SOUTH, southPanel);
 
-		JPanel south1 = new JPanel();
-		south1.add(new JLabel("Type here: "));
+		JPanel south = new JPanel();
+		//south1.add(new JLabel("Type here: "));
 
-		messageArea.setColumns(20);
-		messageArea.setRows(5);
-		jScrollPane.setViewportView(messageArea);
+		//messageArea.setColumns(20);
+		//messageArea.setRows(5);
+		//jScrollPane.setViewportView(messageArea);
 
-		south1.add(jScrollPane);
-		southPanel.add(south1);
+		//south1.add(jScrollPane);
+		//southPanel.add(south1);
 
-		JPanel south2 = new JPanel();
-		south2.add(viewCourseButton);
-		south2.add(enrollButton);
-		south2.add(exitButton);
-		south2.add(enterButton);
-		southPanel.add(south2);
+		//JPanel south2 = new JPanel();
+		south.add(viewCourseButton);
+		south.add(previousCourseButton);
+		south.add(exitButton);
+		southPanel.add(south);
 
 		//Create a Canvas
 		canvas = new CourseCanvas(this);
@@ -88,10 +75,8 @@ public class CoursePanel {
 
 		CourseEventListener listener = new CourseEventListener(this);
 		viewCourseButton.addActionListener(listener);
-		enrollButton.addActionListener(listener);
+		previousCourseButton.addActionListener(listener);
 		exitButton.addActionListener(listener);
-		enterButton.addActionListener(listener);
-
 
 	}
 

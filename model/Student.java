@@ -152,9 +152,10 @@ public class Student {
 		printStudentInfo();
 	}
 
-	public void render(Graphics2D g2){
+	public void render(Graphics2D g2) {
 		g2.setColor(Color.red);
 		g2.setFont(new Font("Courier", Font.BOLD, 20));
-		g2.drawString(firstName, 50, 100);
+		g2.drawString("First Name: " + firstName + "\tLast Name: " + lastName + "\tGrade Year: " + gradeYear
+				+ "\tStudent ID: " + studentID, 50, 100);
 	}
 }
