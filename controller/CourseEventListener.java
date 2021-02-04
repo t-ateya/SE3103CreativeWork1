@@ -7,15 +7,22 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
+
 
 import model.CourseDatabase;
+import model.Student;
 
 public class CourseEventListener implements ActionListener {
-
+	private Student student;
 	private CoursePanel panel;
 
 	public CourseEventListener(CoursePanel panel) {
 		this.panel = panel;
+	}
+
+	public CourseEventListener(Student student) {
+		this.student = student;
 	}
 
 	public CoursePanel getPanel() {
@@ -48,9 +55,18 @@ public class CourseEventListener implements ActionListener {
 			}
 			panel.getCourseCanvas().setCourseIndex(index);
 			panel.getCourseCanvas().repaint();
-		}else if (button == panel.getEnrollButton()){
+		} else if (button == panel.getEnrollButton()) {
+			String message = panel.getCRNField().getText();
+			if (message.equalsIgnoreCase("")) {
+				JOptionPane.showMessageDialog(panel.getWindow(), "Sorry! Must Enter CRN to enroll");
+			} else {
+				String CRN = panel.getCRNField().getText();
+				student = new Student();
+				student.enrollEncourse(CRN);
+			}
+			panel.getCRNField().setText(" ");
 
-		}
+		} 
 
 	}
 

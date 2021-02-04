@@ -3,7 +3,7 @@ package test;
 import java.util.ArrayList;
 
 import model.Course;
-import model.CourseDatabase;
+
 import model.Student;
 
 public class StudentDatabaseAppTest {

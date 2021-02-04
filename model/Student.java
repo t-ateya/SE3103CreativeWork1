@@ -7,13 +7,14 @@ import java.awt.Color;
 import java.awt.Font;
 
 public class Student {
+	private Course c;
 	private ArrayList<Course> db = CourseDatabase.CoursesOfferred;
 
 	private String firstName;
 	private String lastName;
 	private int gradeYear;
 	private String studentID;
-	private ArrayList<Course> Enrolledcourses = new ArrayList<>();
+	private ArrayList<Course> enrolledcourses = new ArrayList<>();
 	private double tuitionBalance;
 	private int numberOfCoursesEnrolled = 0;
 	private String studentInfo;
@@ -53,7 +54,7 @@ public class Student {
 	}
 
 	public ArrayList<Course> getEnrolledcourses() {
-		return Enrolledcourses;
+		return enrolledcourses;
 	}
 
 	public int getNumberOfCoursesEnrolled() {
@@ -97,42 +98,35 @@ public class Student {
 	}
 
 	/*
-	public void enroll() {
-		String CRN;
-		System.out.println("=====================================================");
-		System.out.println("\n       CHOOSE COURSE INFO TO ENROLL");
-		System.out.println("=====================================================");
-		displayCourseInfo(db);
+	 * public void enroll() { String CRN;
+	 * System.out.println("=====================================================");
+	 * System.out.println("\n       CHOOSE COURSE INFO TO ENROLL");
+	 * System.out.println("=====================================================");
+	 * displayCourseInfo(db);
+	 * 
+	 * do { System.out.println("Enter course CRN to enroll (Q to quit): "); Scanner
+	 * in = new Scanner(System.in); CRN = in.nextLine(); for (Course cs : db) {
+	 * 
+	 * if (cs.getCRN().contains(CRN)) { Enrolledcourses.add(cs); tuitionBalance +=
+	 * costPerCourse; numberOfCoursesEnrolled++; } }
+	 * 
+	 * 
+	 * } while (!CRN.equalsIgnoreCase("q"));
+	 * 
+	 * printEnrolledCourses();
+	 * 
+	 * }
+	 */
 
-		do {
-			System.out.println("Enter course CRN to enroll (Q to quit): ");
-			Scanner in = new Scanner(System.in);
-			CRN = in.nextLine();
-			for (Course cs : db) {
-
-				if (cs.getCRN().contains(CRN)) {
-					Enrolledcourses.add(cs);
-					tuitionBalance += costPerCourse;
-					numberOfCoursesEnrolled++;
-				}
-			}
-			
-
-		} while (!CRN.equalsIgnoreCase("q"));
-
-		printEnrolledCourses();
-
-	}
-	*/
-
-	public void enrollEncourse(String CRN){
+	public void enrollEncourse(String CRN) {
 		for (Course cs : db) {
 
 			if (cs.getCRN().contains(CRN)) {
-				Enrolledcourses.add(cs);
+				enrolledcourses.add(cs);
 				tuitionBalance += costPerCourse;
 				numberOfCoursesEnrolled++;
 			}
+			System.out.println("SuccessFull Enrollment");
 		}
 
 	}
@@ -155,8 +149,8 @@ public class Student {
 	}
 
 	public void printStudentInfo() {
-		studentInfo = ("Name: " + firstName + " " + lastName + "\nGrade Level: " + gradeYear + "\nStudentID: "
-				+ studentID + "\nBalance: $" + tuitionBalance);
+		studentInfo = ("Name: " + lastName + "\nGrade Level: " + gradeYear + "\nStudentID: " + studentID
+				+ "\nBalance: $" + tuitionBalance);
 
 		System.out.println(studentInfo);
 	}
@@ -169,7 +163,8 @@ public class Student {
 	public void render(Graphics2D g2) {
 		g2.setColor(Color.yellow);
 		g2.setFont(new Font("Courier", Font.BOLD, 20));
-		g2.drawString("First Name: " + firstName + "\tLast Name: " + lastName + "\tGrade Year: " + gradeYear
-				+ "\tStudent ID: " + studentID, 50, 100);
+		g2.drawString("Name: " + firstName + " " + lastName + " " + "\tSTUDENTID: " + studentID
+				+ "\tGraduate Year: " + gradeYear, 50, 100);
+
 	}
 }

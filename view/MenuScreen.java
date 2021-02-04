@@ -22,14 +22,12 @@ public class MenuScreen {
 		menuPanel.setLayout(new GridLayout(2, 1));
 		menuPanel.setPreferredSize(new Dimension(400, 200));
 
-		JButton courseButton = new JButton("COURSE DATABASE");
 		JButton studentButton = new JButton("STUDENT ENROLLMENT");
-		menuPanel.add(courseButton);
 		menuPanel.add(studentButton);
 
 		cp.add(BorderLayout.CENTER, menuPanel);
 
-		courseButton.addActionListener(event->{
+		studentButton.addActionListener(event->{
 			window.getContentPane().removeAll();
 			var panel = new CoursePanel(window);
 			panel.init();
