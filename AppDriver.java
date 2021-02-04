@@ -8,7 +8,7 @@ public class AppDriver {
 
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setLocation(400, 100);
-		window.setTitle("APPLICATION MENU");
+		window.setTitle("STUDENT ENROLLMENT SYSTEM");
 
 		var menu = new MenuScreen(window);
 		menu.init();

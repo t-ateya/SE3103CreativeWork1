@@ -47,6 +47,12 @@ public class StudentDatabaseAppTest {
 		/*for (Course c : db){
 			c.diplayCourse();
 		} */
+
+
+		Student s = new Student();
+		s.enrollEncourse("1234");
+		s.enrollEncourse("43216");
+		s.printEnrolledCourses();
 	
 	}
 

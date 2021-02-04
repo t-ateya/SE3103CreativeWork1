@@ -33,21 +33,23 @@ public class CourseEventListener implements ActionListener {
 			panel.getWindow().pack();
 			panel.getWindow().revalidate();
 		} else if (button == panel.getViewCourseButton()) {
-			int index = panel.getCanvas().getCourseIndex();
+			int index = panel.getCourseCanvas().getCourseIndex();
 			++index;
 			if (index == CourseDatabase.CoursesOfferred.size()) {
 				index = 0;
 			}
-			panel.getCanvas().setCourseIndex(index);
-			panel.getCanvas().repaint();
+			panel.getCourseCanvas().setCourseIndex(index);
+			panel.getCourseCanvas().repaint();
 		} else if (button == panel.getPreviousCourseButton()) {
-			int index = panel.getCanvas().getCourseIndex();
+			int index = panel.getCourseCanvas().getCourseIndex();
 			--index;
 			if (index < 0) {
 				index = CourseDatabase.CoursesOfferred.size();
 			}
-			panel.getCanvas().setCourseIndex(index);
-			panel.getCanvas().repaint();
+			panel.getCourseCanvas().setCourseIndex(index);
+			panel.getCourseCanvas().repaint();
+		}else if (button == panel.getEnrollButton()){
+
 		}
 
 	}

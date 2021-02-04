@@ -39,7 +39,7 @@ public class Student {
 		setStudentID();
 	}
 
-	private void printEnrolledCourses() {
+	public void printEnrolledCourses() {
 		System.out.println("\n=====================Enrollment Information==================\n");
 		System.out.println("You enrolled in: " + getNumberOfCoursesEnrolled() + " Courses");
 		System.out.println("Your total tuition is:  $" + getTuitionBalance());
@@ -96,6 +96,7 @@ public class Student {
 
 	}
 
+	/*
 	public void enroll() {
 		String CRN;
 		System.out.println("=====================================================");
@@ -115,11 +116,24 @@ public class Student {
 					numberOfCoursesEnrolled++;
 				}
 			}
-			// this.tuitionBalance += costPerCourse;
+			
 
 		} while (!CRN.equalsIgnoreCase("q"));
 
 		printEnrolledCourses();
+
+	}
+	*/
+
+	public void enrollEncourse(String CRN){
+		for (Course cs : db) {
+
+			if (cs.getCRN().contains(CRN)) {
+				Enrolledcourses.add(cs);
+				tuitionBalance += costPerCourse;
+				numberOfCoursesEnrolled++;
+			}
+		}
 
 	}
 
@@ -153,7 +167,7 @@ public class Student {
 	}
 
 	public void render(Graphics2D g2) {
-		g2.setColor(Color.red);
+		g2.setColor(Color.yellow);
 		g2.setFont(new Font("Courier", Font.BOLD, 20));
 		g2.drawString("First Name: " + firstName + "\tLast Name: " + lastName + "\tGrade Year: " + gradeYear
 				+ "\tStudent ID: " + studentID, 50, 100);

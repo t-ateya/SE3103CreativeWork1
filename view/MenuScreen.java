@@ -22,7 +22,7 @@ public class MenuScreen {
 		menuPanel.setLayout(new GridLayout(2, 1));
 		menuPanel.setPreferredSize(new Dimension(400, 200));
 
-		JButton courseButton = new JButton("COURSES DATABASE");
+		JButton courseButton = new JButton("COURSE DATABASE");
 		JButton studentButton = new JButton("STUDENT ENROLLMENT");
 		menuPanel.add(courseButton);
 		menuPanel.add(studentButton);

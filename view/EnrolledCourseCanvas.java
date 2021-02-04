@@ -1,24 +1,27 @@
 package view;
 
-import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-
 import javax.swing.JPanel;
 
 import model.Course;
-import model.CourseDatabase;
+import model.Student;
 
-public class CourseCanvas extends JPanel {
-	
+public class EnrolledCourseCanvas extends JPanel {
+
 	private static final long serialVersionUID = 1L;
+
+	private Course course;
+	private Student student;
 	private CoursePanel panel;
 	private int courseIndex = -1;
-	public CourseCanvas(CoursePanel panel) {
+
+	public EnrolledCourseCanvas(CoursePanel panel) {
 		this.setPanel(panel);
-		setPreferredSize(new Dimension(600, 500));
-		setBackground(Color.BLACK);
+		setPreferredSize(new Dimension(500, 500));
+		setBackground(Color.BLUE);
 	}
 
 	public CoursePanel getPanel() {
@@ -43,15 +46,9 @@ public class CourseCanvas extends JPanel {
 
 		if (courseIndex >= 0){
 			Graphics2D g2 = (Graphics2D)g;
-			Course c = CourseDatabase.CoursesOfferred.get(courseIndex);
-			c.render(g2);
+			course = student.getEnrolledcourses().get(courseIndex);
+			course.render(g2);
 		}
-
 	}
-	
-
-	
-
-	
 	
 }
