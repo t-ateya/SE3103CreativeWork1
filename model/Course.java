@@ -10,6 +10,8 @@ public class Course {
 	private String title;
 	private String CRN;
 	private String AVAILABE_SESSION = "ONLINE";
+
+	
 	private String courseInfo;
 
 	public Course() {

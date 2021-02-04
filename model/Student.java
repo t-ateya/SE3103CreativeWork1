@@ -119,6 +119,7 @@ public class Student {
 	 */
 
 	public void enrollEncourse(String CRN) {
+			
 		for (Course cs : db) {
 
 			if (cs.getCRN().contains(CRN)) {
@@ -126,8 +127,9 @@ public class Student {
 				tuitionBalance += costPerCourse;
 				numberOfCoursesEnrolled++;
 			}
-			System.out.println("SuccessFull Enrollment");
+			
 		}
+		System.out.println("SuccessFull Enrollment");
 
 	}
 
